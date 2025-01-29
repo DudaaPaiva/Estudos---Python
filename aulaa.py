@@ -15,7 +15,7 @@ tamanho = len(frase) # esse comando conta a quantidade de caracteres dentro de u
 print(f'O comprimento da frase é: {tamanho}')
 print(frase.count('o'))# esse comando conta e exibe na tela a quantidade de certa letra em uma frase
 print(frase.count('o',0,14))# fazendo dessa forma ja fatia e faz a contagem no intervalo desejado
-print(frase.find('deo'))# mostra onde começou determinada palavra
+print(frase.find('deo'))# mostra em qual indice começou determinada palavra
 print('Curso' in frase)# operador in para verificar se existe a palavra na string 
 
 #Transformação
@@ -23,6 +23,7 @@ texto = '   Aprenda Python  '
 print(frase.replace('Python', 'Android')) #localiza a palavra fornecida no primeiro argumento e substitui pelo segundo
 print(texto.upper())#deixa todas as letras da string em maiusculas
 print(texto.lower())#deixa todas as letras da string em minusculas
+print(texto.lower().find('python'))#indica em qual posição do indice a palavra desejada está
 print(texto.capitalize())#deixa apenas a primeira letra maiuscula e as outras minusculas
 print(texto.title())#deixa a primeira letra de cada palavra maiúscula 
 print(texto.strip())#remove espaços inuteis tanto do começo quanto do final da string
@@ -30,5 +31,8 @@ print(texto.rstrip())#remove espaços inuteis da direita da string
 print(texto.lstrip())#remove espaços inuteis da esquerda da string
 
 #Divisão de string 
+
 print(frase.split())#comando que divide a string em lista cada um com um indice
-print('-'.join(frase.split()))
+dividido = frase.split()#cria uma variavel que recebe a lista
+print(dividido[0])#printa so a primeira palavra da string
+print('-'.join(frase.split()))#comando separa e poe traços em cada palavra 
